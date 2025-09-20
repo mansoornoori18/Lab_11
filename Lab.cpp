@@ -88,14 +88,22 @@ using namespace std; // IDE Visual Studio,
                  }
                  // Delete old array and point to new one
                  delete[] days;
-            
-            
-            
-            
-            
-            
-            
-            
-            return 0;
+                 days = newDays;
+                 numDays++;
+
+                }
+
+                // Final output: show all vacation days and items packed
+                cout << "\n===== Vacation Packing Plan =====" << endl;
+                for (int i = 0; i < numDays; ++i){
+                    days[i].printPlan();
+                
+                }
+
+                // Clean up memory
+                delete[] days;
+                
+                
+                return 0;      
 
         }
