@@ -53,6 +53,49 @@ using namespace std; // IDE Visual Studio,
 
         int main(){
 
+            VacationDay* days = nullptr;   // dynamic array of VacationDay structs
+            int numDays = 0;               // total number of vacation days
+
+            int total;
+            cout << "How many vacation days are you planning? ";
+            cin >> total;
+            cin.ignore(); // clear input buffer
+
+            for (int i = 0; i < total; ++i){
+                // Create a new array one element larger
+                VacationDay* newDays = new VacationDay[numDays + 1];
+
+                // Copy over old data
+                for (int j = 0; j < numDays; ++j){
+                    newDays[j] = days[j];
+                }
+
+                 // Input new day's activity
+                 cout << "\nEnter activity or theme for day #" << (i + 1) << ": ";
+                 getline(cin, newDays[numDays].activity);
+
+                 // Input items to pack for that day
+                 int itemCount;
+                 cout << "How many items to pack for \"" << newDays[numDays].activity << "\"? ";
+                 cin >> itemCount;
+                 cin.ignore();
+
+                 for (int k = 0; k < itemCount; ++k){
+                    string item;
+                    cout << "  Enter item #" << (k + 1) << ": ";
+                    getline(cin, item);
+                    newDays[numDays].addItem(item);
+                 }
+                 // Delete old array and point to new one
+                 delete[] days;
+            
+            
+            
+            
+            
+            
+            
+            
             return 0;
 
         }
