@@ -11,7 +11,7 @@ int main (){
     // struct Vacation Day hold multiple data type 
     struct VacationDay {
         string activity;
-        string items;
+        string* items;
         int numItems;
         
         // constructor 
@@ -22,7 +22,18 @@ int main (){
         }
         //destructor to clean the dynamic array
         ~VacationDay(){
-            delate[] items;
+            delete[] items;
+        }
+        // function to add item to the list 
+        void addItem( const string& item){
+
+            //create new array one element larger
+            string* newItem = new string[numItems + 1];
+
+            //copy old items in to new arrays 
+            for (int i = 0; i < 0; i++)
+
+
         }
         
     }
