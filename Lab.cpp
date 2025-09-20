@@ -3,11 +3,6 @@
 using namespace std; // IDE Visual Studio,
 
 
-
-
-// main function 
-int main (){
-
     // struct Vacation Day hold multiple data type 
     struct VacationDay {
         string activity;
@@ -41,27 +36,23 @@ int main (){
             // delete old aray and replace with new 
             delete[] items;
             items = newItems;
-            numItmes++;
-
-
-
-
-
-
-
-
-
-
-
+            numItems++;
 
             }
+            // Function to print the vacation day and its packing list
+        void printPlan() const {
+            cout << "Activity: " << activity << endl;
+            cout << "Packing List (" << numItems << " items):" << endl;
+            
+            for (int i = 0; i < numItems; ++i){
+                cout << "  - " << items[i] << endl;
+            }
+            cout << "--------------------------" << endl;
+        }
+    };
 
+        int main(){
+
+            return 0;
 
         }
-        
-    
-
-
-    return 0;
-
-}
