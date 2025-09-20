@@ -20,6 +20,11 @@ int main (){
             numItems = 0;
 
         }
+        //destructor to clean the dynamic array
+        ~VacationDay(){
+            delate[] items;
+        }
+        
     }
 
 
