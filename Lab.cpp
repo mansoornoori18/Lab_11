@@ -28,15 +28,38 @@ int main (){
         void addItem( const string& item){
 
             //create new array one element larger
-            string* newItem = new string[numItems + 1];
+            string* newItems = new string[numItems + 1];
 
             //copy old items in to new arrays 
-            for (int i = 0; i < 0; i++)
+            for (int i = 0; i < numItems; i++){
+                newItems[i] = items[i];
+
+            }
+            // add the new items to the end 
+            newItems[numItems] = item;
+
+            // delete old aray and replace with new 
+            delete[] items;
+            items = newItems;
+            numItmes++;
+
+
+
+
+
+
+
+
+
+
+
+
+            }
 
 
         }
         
-    }
+    
 
 
     return 0;
